@@ -54,3 +54,15 @@ if(PROJECT_IS_TOP_LEVEL)
         set_target_properties(${EXAMPLE_NAME} PROPERTIES CXX_STANDARD 20 CXX_STANDARD_REQUIRED ON)
     endforeach()
 endif()
+
+# ---- Add documentation target
+set(DOXYGEN_PROJECT_NAME VtkFileWriter)
+set(DOXYGEN_PROJECT_ROOT "${CMAKE_CURRENT_LIST_DIR}/..")
+set(DOXYGEN_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/doxygen")
+
+add_custom_target(
+  GenerateDocs
+  ${CMAKE_COMMAND} -E make_directory "${DOXYGEN_OUTPUT_DIRECTORY}"
+  COMMAND echo "Docs written to: ${DOXYGEN_OUTPUT_DIRECTORY}"
+  WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+)
