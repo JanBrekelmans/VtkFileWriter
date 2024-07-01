@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.21...3.29)
 
 project(
     VtkFileWriter
-    VERSION 0.0.1
+    VERSION 0.1
     LANGUAGES CXX
 )
 
