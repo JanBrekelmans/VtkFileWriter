@@ -1,0 +1,26 @@
+# Configuration for Doxygen for use with CMake
+# Only options that deviate from the default are included
+# To create a new Doxyfile containing all available options, call `doxygen -g`
+
+# Get Project name and version from CMake
+PROJECT_NAME = VtkFileWriter
+
+# Add sources
+INPUT = /include
+EXTRACT_ALL = YES
+RECURSIVE = YES
+
+# set relative include paths
+FULL_PATH_NAMES = YES
+STRIP_FROM_PATH = /include
+
+# We use m.css to generate the html documentation, so we only need XML output
+GENERATE_XML = NO
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+XML_PROGRAMLISTING = NO
+CREATE_SUBDIRS = NO
+
+# Include all directories, files and namespaces in the documentation
+# Disable to include only explicitly documented objects
+M_SHOW_UNDOCUMENTED = YES
